@@ -41,14 +41,6 @@ ripemd.version(320, {exact: true}).test('744fdac358014a96aedd7e87150c5a5e04a1300
 
 Returns a regex for matching RIPEMD hashes.
 
-#### options.exact
-
-Type: `boolean`<br>
-Default: `false` *(Matches any RIPEMD hash in a string)*
-
-Only match an exact string. Useful with `RegExp#test()` to check if a string is a RIPEMD hash.
-
-
 ### ripemd.version([version], [options])
 
 Returns a regex for matching specific RIPEMD version hashes.

@@ -48,7 +48,7 @@ Returns a regex for matching specific RIPEMD version hashes.
 #### version
 
 Type: `integer`<br>
-Supported Versions: `1`, `224`, `256`, `384`, `512`
+Supported Versions: `128`, `160`, `256`, `320`
 
 Match a specific version of RIPEMD.
 

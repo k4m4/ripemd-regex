@@ -14,7 +14,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "ava && tsd"
+    "test": "xo && ava && tsd"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "guard-for-in": "off"
+    }
   },
   "keywords": [
     "ripemd",
@@ -26,6 +32,7 @@
   ],
   "devDependencies": {
     "ava": "^1.2.1",
-    "tsd": "^0.11.0"
+    "tsd": "^0.11.0",
+    "xo": "^0.25.3"
   }
 }

@@ -13,35 +13,35 @@
 ## Usage
 
 ```js
-const ripemd = require('ripemd-regex');
+const ripemdRegex = require('ripemd-regex');
 
-ripemd().test('nodejsrocks 744fdac358014a96aedd7e87150c5a5e04a13001');
+ripemdRegex().test('nodejsrocks 744fdac358014a96aedd7e87150c5a5e04a13001');
 //=> true
 
-ripemd({exact: true}).test('nodejsrocks 744fdac358014a96aedd7e87150c5a5e04a13001 foo');
+ripemdRegex({exact: true}).test('nodejsrocks 744fdac358014a96aedd7e87150c5a5e04a13001 foo');
 //=> false
 
-ripemd({exact: true}).test('744fdac358014a96aedd7e87150c5a5e04a13001');
+ripemdRegex({exact: true}).test('744fdac358014a96aedd7e87150c5a5e04a13001');
 //=> true
 
-ripemd.version(128, {exact: true}).test('3edc724c455361be0a366c838e7d2434');
+ripemdRegex.version(128, {exact: true}).test('3edc724c455361be0a366c838e7d2434');
 //=> true
 
-ripemd.version(320, {exact: true}).test('744fdac358014a96aedd7e87150c5a5e04a13001');
+ripemdRegex.version(320, {exact: true}).test('744fdac358014a96aedd7e87150c5a5e04a13001');
 //=> false
 
-'nodejsrocks 	744fdac358014a96aedd7e87150c5a5e04a13001 rainbow f4971074a8da200c122c04bc4e0fa96066913d6f38d3397eb61a7341078cd4841386e159993826af'.match(ripemd());
+'nodejsrocks 	744fdac358014a96aedd7e87150c5a5e04a13001 rainbow f4971074a8da200c122c04bc4e0fa96066913d6f38d3397eb61a7341078cd4841386e159993826af'.match(ripemdRegex());
 //=> ['744fdac358014a96aedd7e87150c5a5e04a13001','f4971074a8da200c122c04bc4e0fa96066913d6f38d3397eb61a7341078cd4841386e159993826af']
 ```
 
 
 ## API
 
-### ripemd([options])
+### ripemdRegex([options])
 
 Returns a regex for matching RIPEMD hashes.
 
-### ripemd.version([version], [options])
+### ripemdRegex.version([version], [options])
 
 Returns a regex for matching specific RIPEMD version hashes.
 

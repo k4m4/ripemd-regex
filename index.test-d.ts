@@ -1,7 +1,7 @@
 import {expectType} from 'tsd';
-import ripemd = require('.');
+import ripemdRegex = require('.');
 
-expectType<RegExp>(ripemd());
-expectType<RegExp>(ripemd({exact: true}));
-expectType<RegExp>(ripemd.version(128));
-expectType<RegExp>(ripemd.version(128, {exact: false}));
+expectType<RegExp>(ripemdRegex());
+expectType<RegExp>(ripemdRegex({exact: true}));
+expectType<RegExp>(ripemdRegex.version(128));
+expectType<RegExp>(ripemdRegex.version(128, {exact: false}));

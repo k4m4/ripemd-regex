@@ -23,7 +23,7 @@ function buildRegExp(bodyExp, opts) {
 	return new RegExp(regExp, 'g')
 }
 
-const ripemd = opts => {
+const ripemdRegex = opts => {
 	const individualRegExps = []
 	for (const version in ripemdRegExps) {
 		const oneRegExp = '(?:' + ripemdRegExps[version] + ')'
@@ -34,7 +34,7 @@ const ripemd = opts => {
 	return buildRegExp(bodyExp, opts)
 }
 
-ripemd.version = (version, opts) => {
+ripemdRegex.version = (version, opts) => {
 	if (!ripemdRegExps[version]) {
 		throw new Error('Invalid hash version')
 	}
@@ -43,4 +43,4 @@ ripemd.version = (version, opts) => {
 	return buildRegExp(bodyExp, opts)
 }
 
-module.exports = ripemd
+module.exports = ripemdRegex

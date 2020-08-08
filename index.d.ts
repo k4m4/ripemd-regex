@@ -9,10 +9,21 @@ declare namespace ripemdRegex {
 	/**
 	Available RIPEMD versions.
 	*/
-	type Version = 128 | 160 | 256 | 320;
+	type Version = 128 | 160 | 256 | 320
 }
 
 declare const ripemdRegex: {
+	/**
+	Returns a regex for matching specific RIPEMD version hashes.
+	@example
+	```
+	import ripemdRegex = require('ripemd-regex')
+	ripemdRegex.version(128, {exact: true}).test('3edc724c455361be0a366c838e7d2434');
+	//=> true
+	```
+	*/
+	version: (version: ripemdRegex.Version, options?: ripemdRegex.Options) => RegExp;
+
 	/**
 	Returns a regex for matching RIPEMD hashes.
 	@example
@@ -23,17 +34,6 @@ declare const ripemdRegex: {
 	```
 	*/
 	(options?: ripemdRegex.Options): RegExp;
-
-	/**
-	Returns a regex for matching specific RIPEMD version hashes.
-	@example
-	```
-	import ripemdRegex = require('ripemd-regex')
-	ripemdRegex.version(128, {exact: true}).test('3edc724c455361be0a366c838e7d2434');
-	//=> true
-	```
-	*/
-	version(version: ripemdRegex.Version, options?: ripemdRegex.Options): RegExp;
 }
 
-export = ripemdRegex;
+export = ripemdRegex
